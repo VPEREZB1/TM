@@ -2,7 +2,7 @@ import streamlit as st
 import cv2
 import numpy as np
 #from PIL import Image
-from PIL import Image as Image, ImageOps as ImagOps
+from PIL import Image
 from keras.models import load_model
 
 import platform
@@ -13,9 +13,9 @@ st.write("Versión de Python:", platform.python_version())
 model = load_model('keras_model.h5')
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
-st.title("🧿Reconocimiento de Imágenes🧿")
+st.title("Reconocimiento de Imágenes🧿")
 #st.write("Versión de Python:", platform.python_version())
-image = Image.open('OIG5.jpg')
+image = Image.open('yaaa.png')
 st.image(image, width=350)
 with st.sidebar:
     st.subheader("Usando un modelo entrenado en teachable Machine puedes Usarlo en esta app para identificar")
